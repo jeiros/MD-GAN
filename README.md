@@ -27,5 +27,8 @@ from mdgan import MDGAN
 trjs = AlanineDipeptide().get().trajectories
 data, sc = make_trajectory_trainable(trjs)  # sc is the MinMaxScaler we'll need it later
 gan = MDGAN(n_atoms=22)
-losses = gan.train(data, num_epochs=10)  # That's it
+losses = gan.train(data, num_epochs=50)  # That's it
 ```
+
+![losses](./losses.png)
+![features](./features.png)
